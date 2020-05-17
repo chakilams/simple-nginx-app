@@ -4,7 +4,7 @@ metadata:
   name: nginx
   namespace: owndemo
   annotations:
-    fluxcd.io/tag.nginx: glob:v*
+    fluxcd.io/tag.demoapp: glob:v*
     fluxcd.io/automated: 'true'
 spec:
   replicas: 1
@@ -22,5 +22,13 @@ spec:
           app: nginx
       spec:
         containers:
-          - image: docker.io/chakilams3/simple-nginx:v17
-            name: nginx
+          - name: demoapp
+            image: docker.io/chakilams3/simple-nginx:v17
+            ports:
+            - name: http
+              containerPort: 5000
+          - name: nginx
+            image: nginx:1.16-alpine-perl
+            ports:
+            - name: http
+              containerPort: 80
