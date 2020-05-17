@@ -4,7 +4,7 @@ metadata:
   name: nginx
   namespace: owndemo
   annotations:
-    fluxcd.io/tag.nginx: glob:15
+    fluxcd.io/tag.nginx: glob:v*
     fluxcd.io/automated: 'true'
 spec:
   replicas: 1
@@ -22,5 +22,5 @@ spec:
           app: nginx
       spec:
         containers:
-          - image: docker.io/chakilams3/simple-nginx:15
+          - image: docker.io/chakilams3/simple-nginx:v17
             name: nginx
