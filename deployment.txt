@@ -5,6 +5,7 @@ metadata:
   namespace: owndemo
   annotations:
     fluxcd.io/tag.demoapp: glob:v*
+    fluxcd.io/tag.demoapp: nginx:1.18.0
     fluxcd.io/automated: 'true'
 spec:
   replicas: 1
