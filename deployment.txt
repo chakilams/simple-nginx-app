@@ -23,7 +23,7 @@ spec:
       spec:
         containers:
           - name: demoapp
-            image: docker.io/chakilams3/simple-nginx:v17
+            image: docker.io/chakilams3/simple-nginx:v18
             ports:
             - name: http
               containerPort: 5000
