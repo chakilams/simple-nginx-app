@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,7 +19,7 @@ spec:
         app: nginx
     spec:
       containers:
-        - name: nginx
-          image: docker.io/chakilams3/simple-nginx:v34
-          ports:
-            - containerPort: 80
+      - name: nginx
+        image: docker.io/chakilams3/simple-nginx:v28
+        ports:
+        - containerPort: 80
