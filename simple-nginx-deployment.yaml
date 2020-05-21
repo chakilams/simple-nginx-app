@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.nginx: "true"
+    fluxcd.io/tag.nginx: glob:v*
   name: nginx-deployment
   labels:
     app: nginx
