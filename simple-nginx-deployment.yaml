@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: docker.io/chakilams3/simple-nginx:v28
+        image: docker.io/chakilams3/simple-nginx:v37
         ports:
         - containerPort: 80
